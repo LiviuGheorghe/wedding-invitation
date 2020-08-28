@@ -16,7 +16,7 @@ img {
 body {
   background: url(assets/wedding-landing-background.png) repeat center;
   font-family: 'Libre Baskerville', cursive;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   color: #444349;
 }
@@ -33,7 +33,7 @@ h1, h2 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -60,6 +60,12 @@ a:hover {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .cover {
+    background: url('assets/wedding-landing-cover.jpg') no-repeat center/cover;
+  }
+}
+
 .wrapper {
   display: table-cell;
   vertical-align: middle;
@@ -72,9 +78,23 @@ a:hover {
   color: hsla(0,0%,100%,.9);
 }
 
+@media (min-width: 768px) {
+  .wrapper-text {
+    width: 45%;
+    padding: 1.25rem;
+    border-radius: 4px;
+  }
+}
+
 .tagline {
-  font-size: 1.25rem;
-  letter-spacing: .15rem;
+  font-size: 1.5rem;
+  letter-spacing: .16rem;
+}
+
+@media (min-width: 768px) {
+  .tagline {
+    text-transform: uppercase;
+  }
 }
 
 .tagline::after {
@@ -87,13 +107,19 @@ a:hover {
 }
 
 h1 {
-  font-size: 3.15rem;
+  font-size: 4rem;
   color: #d2ba87;
   margin-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
 .date {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   letter-spacing: .15rem;
 }
 
@@ -109,7 +135,7 @@ h1 {
 
 /* === LOCATIONS STYLES === */
 .place {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: 'Libre Baskerville', serif;
 }
 
@@ -134,14 +160,34 @@ font-weight: 700;
     background-color: #444349;
 }
 
+@media (min-width: 768px) {
+  .place {
+    display: inline-block;
+    width: 30%;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+  
+  .place::after {
+    display: none;
+  }
+}
+
 /* === PROGRAM STYLES === */
 
 .program {
-  width: 100%;
+  width: 100vw;
   text-align: left;
   background-color: hsla(100,0%,0%,.6);
   color: #d2ba87;
   font-family: 'Mulish', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .program-wrapper {
+    width: 30vw;
+    margin: 0 auto;
+  }
 }
 
 .program h2 {
@@ -169,7 +215,7 @@ font-weight: 700;
 
 /* === FAQ STYLES === */
 .faq {
-  width: 100%;
+  width: 100vw;
   background-color: hsla(100,0%,0%,.6);
   color: #d2ba87;
 }
@@ -197,6 +243,24 @@ font-weight: 700;
     background-color: #d2ba87;
 }
 
+@media (min-width: 768px) {
+  .questions-group {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+  
+  .questions-group h3 {
+    text-align: left;
+  }
+  
+  .questions-group::after {
+    display: none;
+  }
+}
+
 /* === FOOTER STYLES === */
 
 footer {
@@ -206,8 +270,14 @@ footer {
   text-align: center;
   color: #fff;
   background-color: #606060;
-  font-family: 'Mulish' sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-size: .875rem; 
+}
+
+@media (min-width: 768px){
+  footer {
+    min-height: 7vh;
+  }
 }
 
 .footer-wrapper {
